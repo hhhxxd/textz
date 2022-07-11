@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- （1）给对象obj添加Symbol.iterator方法。
+
+（2）Symbol.iterator方法内部定义变量表示遍历次数，并返回一个对象。
+
+（3）返回的对象中设置next方法。
+
+（4）在next方法中通过判断设置对应的返回值。 -->
+<body>
+    <script>
+        const obj = {
+            "0": "xm",
+            "sex": "male",
+            length: 2
+        }
+        // 在此补充代码
+        obj[Symbol.iterator] = () => {
+            let index = 0;
+            return {
+                next() {
+                    index++;
+                    if (index == 1) {
+                        return {
+                            value: obj['0'],
+                            done: false
+                        }
+                    } else if (index == 2) {
+                        return {
+                            value: obj.sex,
+                            done: false
+                        }
+                    } else if (index == 3) {
+                        return {
+                            value: obj.length,
+                            done: false
+                        }
+                    } else {
+                        return {
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+        for (let item of obj) {
+            console.log(item);
+        }
+    </script>
+</body>
+
+</html>
