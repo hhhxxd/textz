@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+// 补充代码
+const sum = (...arrs)=>{
+    let result = 0;
+    for(var i=0;i<arrs.length;i++){
+        result += arrs[i];
+    }
+    return result/arrs.length;
+}
+document.write(sum(1,2,3,4,5))
+</script>
+</body>
+</html>
