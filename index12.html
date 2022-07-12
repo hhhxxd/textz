@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "study hard and make and progress every day study"
+        // 在此补充代码
+        let strArray = str.split(' ')
+        // console.log(strArray);
+        const strSet = new Set(strArray)
+        strArray = [...strSet]
+        const noRepeatStr = strArray.join(' ')
+        console.log(noRepeatStr);
+    </script>
+</body>
+
+</html>
