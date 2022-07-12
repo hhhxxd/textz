@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<!-- 1、创建Set实例
+
+2、使用add方法，向实例中添加数字1,2,3
+
+3、使用delete方法，删除实例中的数字2
+
+4、使用size属性，查看实例的成员总数
+
+5、使用forEach方法遍历成员 -->
+
+<body>
+    <script>
+
+        let s = new Set();
+        s.add(1).add(2).add(3);
+        s.delete(2);
+        console.log(s.size);
+
+        s.forEach(function (value, key, s) {
+            console.log(value, key, s);
+        })
+
+    </script>
+</body>
+</html>
