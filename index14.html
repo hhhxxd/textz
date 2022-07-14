@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 下列代码中提供了Map、arguments和Nodelist对象，同学可以结合数组的解构赋值，输出查看这些原生可遍历对象中的值。
+
+任务
+
+（1）首先将原生可遍历对象，在数组中使用数组展开运算符进行展开。
+
+（2）然后通过解构赋值对展开的数组进行匹配。
+
+（3）最后测试输出结果。 -->
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        // Nodelist对象
+        const list = document.querySelectorAll('li')
+        // Map对象
+        const map = new Map([
+            ['a', 1],
+            ['b', 2]
+        ])
+        // 在此补充代码
+        const [c, d, e] = [...list];
+        console.log(c, d, e);
+        const [g, h] = [...map];
+        console.log(g, h);
+        const fn = function () {
+            const [a, b] = [...arguments];
+            console.log(a, b);
+        }
+        fn(1, 3);
+    </script>
+</body>
+
+</html>
