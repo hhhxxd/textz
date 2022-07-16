@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<!-- 视频中老师封装了一个函数，使用includes方法进行判断，实现url的参数拼接，接下来，让我们灵活运用之前所学的知识，处理url地址结尾是？和&符号的情况，实现拼接效果。
+
+任务
+
+（1）先使用includes方法判断是url中否包含？
+
+（2）如果包含？, 再判断url最后一位字符是不是?或&符号，是的话就拼接空字符串，不是的话就拼接&符号
+
+（3）如果不包含？, 就拼接一个？ -->
+<body>
+   <script>
+ 
+       // 3.应用
+      let url = 'https://www.imooc.com/course/list?';
+      let url1 ='https://www.imooc.com/course/list?username=xm';
+      let url2 ='https://www.imooc.com/course/list?username=xm&';
+ 
+      const addURLParam = (url, name, value) => {
+         // 在此补充代码
+         if(url.includes('?')){
+            if(url.substr(-1,1)=='?' || url.substr(-1,1)=='&'){
+            url += "";
+            }else{
+                url += '&';
+            }
+        }else{
+            url += '?';
+        }
+
+         url += `${name}=${value}`;
+        return url;
+      };
+      url = addURLParam(url, 'password', 'admin');
+      url1 =  addURLParam(url1, 'password', 'admin');
+      url2 =  addURLParam(url2, 'password', 'admin');
+      document.write(url,'<br>');
+      document.write(url1,'<br>');
+      document.write(url2,'<br>');
+   </script>
+</body>
+</html>
