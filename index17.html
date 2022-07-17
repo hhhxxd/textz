@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /* 1、logo、导航项、登陆注册按钮这3项在一行显示，并且要垂直居中。
+
+          2、导航项各项之间的距离是一样的。
+          
+          3、登录、注册按钮之间要有一些距离。 */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            background-color: black;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 74px;
+            padding: 0 80px;
+            box-sizing: border-box;
+        }
+
+        header .logo {
+            flex-grow: 1;
+        }
+
+        header .nav {
+            display: flex;
+            color: #fff;
+            justify-content: space-around;
+            flex-grow: 5;
+        }
+
+        header .nav li {
+            text-align: center;
+        }
+
+        header .login {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        header .login input {
+            background-color: rgb(255, 165, 0);
+            border: 1px solid rgb(255, 165, 0);
+            border-radius: 5px;
+            color: #fff;
+            padding: 5px;
+        }
+
+        header .login input+input {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="http://climg.mukewang.com/59feb59700019dab01910057.png" alt="">
+        </div>
+        <ul class="nav">
+            <li>课程</li>
+            <li>路径</li>
+            <li>猿问</li>
+            <li>手记</li>
+        </ul>
+        <div class="login">
+            <input type="button" value="登录">
+            <input type="button" value="注册">
+        </div>
+    </header>
+</body>
+
+</html>
