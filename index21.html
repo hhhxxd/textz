@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <meta name=""> -->
+    <style>
+        #box {
+            width: 80%;
+            margin: 0 auto;
+            background: #ccc;
+            text-align: center;
+        }
+
+        #box>img {
+            display: inline-block;
+            padding: 1.5%;
+            width: 21%;
+            height: 200px;
+        }
+        /* （1）显示器宽度大于960px时，图片呈一行4列布局；
+
+        （2）宽度小于960px大于780px时，呈一行3列布局；
+        
+        （3）宽度小于780px大于440px时，呈一行2列布局；
+        
+        （4）宽度小于440px时，呈一行1列布局。 */
+        /*此处写代码*/
+        @media screen and (max-width:960px) {
+            #box>img {
+                width: 25%;
+            }
+        }
+
+        @media screen and (max-width:780px) {
+            #box>img {
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width:440px) {
+            #box>img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e49100014e5010601059.jpg" alt="">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e53b00012e6d09940789.jpg" alt="">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e53c0001d04e09940732.jpg" alt="">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e49100014e5010601059.jpg" alt="">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e53b00012e6d09940789.jpg" alt="">
+        <img src="http://img1.sycdn.imooc.com/climg/5a45e53c0001d04e09940732.jpg" alt="">
+    </div>
+</body>
+
+</html>
